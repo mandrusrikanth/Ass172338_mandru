@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>SignUp</title>
+<style>
+     .jumbotron{
+         background-color: #FFEC8B;
+     }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+    <div class="row">
+		<div class="span12">
+			<form class="form-horizontal" action="Servlet" method="POST">
+			  <fieldset>
+			    <div id="legend">
+			      <legend >SignUp</legend>
+			      
+			    </div>
+			    <div class="control-group">
+			      <!-- firstname -->
+			      <label class="control-label"  for="firstname">Firstname</label>
+			      <div class="controls">
+			        <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			     
+			     <div class="control-group">
+			      <!-- emailid -->
+			      <label class="control-label"  for="emailid">EMail_Id</label>
+			      <div class="controls">
+			        <input type="text" id="emailid" name="email_id" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- createPassword-->
+			      <label class="control-label" for="createpassword">Create Password</label>
+			      <div class="controls">
+			        <input type="password" id="createpassword" name="cre_pwd" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			     <div class="control-group">
+			      <!-- confirmPassword-->
+			      <label class="control-label" for="confirmpassword">Confirm Password</label>
+			      <div class="controls">
+			        <input type="password" id="confirmpassword" name="con_pwd" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- mobilenumber -->
+			      <label class="control-label"  for="mobilenumber">Mobile Number</label>
+			      <div class="controls">
+			        <input type="text" id="mobilenumber" name="number" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			   
+			    <br>
+			    <div class="control-group">
+			      <!-- Button -->
+			      <div class="controls">
+			        <button class="btn btn-success">SignUp</button>
+			      </div>
+			    </div>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

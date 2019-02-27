@@ -12,6 +12,11 @@
 
 
 </head>
+<ul class="nav navbar-nav navbar-right">
+        <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="Signup.html"><span class="glyphicon glyphicon-sign-up"></span> Sign Up</a></li>
+        
+      </ul>
 <body>
 	<div class="jumbotron">
 		<div class="container text-center">
