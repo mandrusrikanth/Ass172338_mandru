@@ -1,6 +1,7 @@
 package com.sign.up;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -41,12 +42,13 @@ public class signoutServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
-		response.setContentType("home.html");
+		response.setContentType("text/html");
 		String firstname = request.getParameter("firstname");
 		String emil_id = request.getParameter("email_id");
 		String cre_pwd = request.getParameter("cre_pwd");
 		String con_pwd = request.getParameter("con_pwd");
-		long getNumber=Long.parseLong(request.getParameter("getNumber"));
+	long getNumber=Long.parseLong(request.getParameter("number"));
+		//int getNumber=Integer.parseInt(request.getParameter("number"));
 		System.out.println(firstname+" "+emil_id+" "+cre_pwd+" "+con_pwd);
 		
 		SignupDao obj = new SignupDao();
@@ -55,7 +57,9 @@ public class signoutServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		response.sendRedirect("jailavakusa.html");
+		//response.sendRedirect("");
+		PrintWriter out=response.getWriter();
+		out.print("reg success");
 		
 		
 	}

@@ -51,7 +51,7 @@ public class Servlet extends HttpServlet {
 		if(status==true)
 		{
 			
-			response.sendRedirect("jailavakusa.jsp");
+			response.sendRedirect("comment.html");
 			
 		}
 		else

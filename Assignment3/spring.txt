@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+<aop:aspectj-autoproxy /> 
+<bean name="triangle" class="model.Triangle">
+<property name="name" value="trianglename" >
+</property>
+</bean>
+<bean name="circle" class="model.Circle">
+<property name="name" value="cirlename is scalene " > 
+</property>
+</bean>
+<bean name="shapeService" class="service.ShapeService" autowire="byName">
+ </bean>
+ <bean name="loggingAspect" class="aspect.LoggingAspect" />
+  <aop:config>
+  <aop:aspect id="loggingAspect" ref="loggingAspect">
+<!--   <aop:pointcut id="allGetters()" expression="execution(public * get*(..))" /> -->
+<!--   <aop:around pointcut-ref="allGetters()" method="around" /> -->
+  <aop:around pointcut="execution(public * get*(..))" method="around" />
+  </aop:aspect> 
+  </aop:config>
+
+</beans>
