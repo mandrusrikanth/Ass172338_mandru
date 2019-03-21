@@ -1,0 +1,17 @@
+//Return numbers only
+
+<!DOCTYPE html>
+<html>
+<h3>Return numbers only</h3>
+<body>
+<p id="demo"> </p>
+<script >
+var array=['text', 3, 7, 'github', 13, 'dev'];
+document.getElementById("demo").innerHTML = numbersOnly(array);
+function numbersOnly(arr) {
+  return arr.filter(arr => typeof arr == "number");
+}
+</script>
+</body>
+</html>
+

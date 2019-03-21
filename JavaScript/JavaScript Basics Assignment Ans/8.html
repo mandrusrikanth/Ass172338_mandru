@@ -1,0 +1,24 @@
+//Return the Min, Max, Length and Average of an Array
+
+<!DOCTYPE html>
+<html>
+<h3>Add up the numbers  </h3>
+<body>
+<p id="demo"> </p>
+<script >
+var array=[56,83,42,74,36,12,96,25,11,64];
+document.getElementById("demo").innerHTML = minMaxLengthAverage(array);
+function minMaxLengthAverage(arr) {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  const len = arr.length;
+    const ave = arr => arr.reduce((acc, curVal) => acc + curVal, 0) / len;
+  const average = ave(arr);
+ 
+  return [min, max, len, average];
+}
+</script>
+</body>
+</html>
+
+

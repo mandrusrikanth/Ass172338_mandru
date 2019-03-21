@@ -1,0 +1,22 @@
+//Add up the numbers
+
+// 5 + 4 + 3 + 2 + 1 + 0 = 15
+<!DOCTYPE html>
+<html>
+<h3>Add up the numbers  </h3>
+<body>
+<p id="demo"> </p>
+<script >
+var num=10;
+document.getElementById("demo").innerHTML = addUp(num);
+function addUp(num) {
+  if (num <= 1) {
+    return num;
+  } else {
+    return num + addUp(num - 1);
+  }
+}
+</script>
+</body>
+</html>
+

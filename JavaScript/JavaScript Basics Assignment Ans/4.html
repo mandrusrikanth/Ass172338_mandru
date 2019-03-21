@@ -1,0 +1,22 @@
+//Identify if a number is Odd or Even?
+
+
+<!DOCTYPE html>
+<html>
+<h3>Even Or Odd</h3>
+<body>
+<p id="demo"> </p>
+<script >
+var num = 7;
+document.getElementById("demo").innerHTML = oddOrEven(num);
+function oddOrEven(int) {
+  let output = int % 2;
+  if (output == 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+</script>
+</body>
+</html>

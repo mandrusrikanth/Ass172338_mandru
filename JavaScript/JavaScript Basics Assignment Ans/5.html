@@ -1,0 +1,17 @@
+//Eliminate all odd numbers in an array.
+
+<!DOCTYPE html>
+<html>
+<h3>Even Values </h3>
+<body>
+<p id="demo"> </p>
+<script >
+var array=[20,3,6,5,24,55,32];
+document.getElementById("demo").innerHTML = evenOnly(array);
+function evenOnly(arr) {
+  let result = arr.filter(arr => arr % 2 == 0);
+  return result;
+}
+</script>
+</body>
+</html>

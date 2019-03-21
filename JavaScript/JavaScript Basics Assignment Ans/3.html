@@ -1,0 +1,22 @@
+//Factorialize a number[5040]
+
+
+<!DOCTYPE html>
+<html>
+<h3>Factorial Of 7</h3>
+<body>
+<p id="demo"> </p>
+<script >
+var num = 7;
+document.getElementById("demo").innerHTML = factorializer(num);
+function factorializer(int) {
+  if (int <= 1) {
+    return 1;
+  } else {
+    return int * factorializer(int - 1);
+  }
+}
+</script>
+</body>
+</html>
+

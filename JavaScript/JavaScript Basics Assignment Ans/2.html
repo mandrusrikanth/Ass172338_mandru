@@ -1,0 +1,17 @@
+//Sort strings by Alphabetical Order
+
+
+<!DOCTYPE html>
+<html>
+<h3>Alphabatical Order </h3>
+<body>
+<p id="demo"> </p>
+<script >
+var str = "Gopikrishna, The Employee";
+document.getElementById("demo").innerHTML = alphabeticalOrder(str);
+function alphabeticalOrder(str) {
+  return str.split("").sort().join("");
+}
+</script>
+</body>
+</html>

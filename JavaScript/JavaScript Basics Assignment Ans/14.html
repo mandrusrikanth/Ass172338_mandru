@@ -1,0 +1,22 @@
+//Multiply by length
+
+<!DOCTYPE html>
+<html>
+<h3>Multiply by length</h3>
+<body>
+<p id="demo"></p>
+<script >
+var array=[3,5,5];
+document.getElementById("demo").innerHTML = multiplyByLength(array);
+function multiplyByLength(arr) {
+  let len = arr.length;
+  for (i = 0; i < len; i++) {
+    arr[i] = arr[i] * len;
+  }
+  return arr;
+}
+</script>
+</body>
+</html>
+
+
