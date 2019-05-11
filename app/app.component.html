@@ -1,0 +1,402 @@
+
+ <style>
+
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+  #demo
+  {
+  background-color:slateblue;
+  }
+  .background
+    {
+      background-color:grey;
+    }
+  </style>
+    <div class="container-fluid">
+      <br>
+
+        <h1><marquee behavior="scroll" direction="left"> <p class="spinner-grow  text-info"> </p><b class="text-warning">Welcome To Coupons App</b> <p class="spinner-grow  text-info"> </p></marquee></h1>
+        <br>
+        
+    </div>
+      
+         <div class="container-fluid" >
+            <div id = "header">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      
+    <a class='navbar-brand'></a>
+  
+    <ul class='nav nav-pills'>
+       
+        <li><a class='nav-link'  ></a></li>
+        <li><a class='nav-link'  ></a></li>
+        <a class="navbar-brand" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT26fyn4kypHyXOoGHiM7dHYidIUrmFMyYP7QuCBioYsihs-aFQHA" alt="logo" style="width:80px;">
+          </a>
+        <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+ 
+  
+     
+    <li><a class='nav-link' class="btn btn-info btn-lg active" role="button" style="margin:10px;" routerLinkActive='active' [routerLink]="['/home']">Home</a></li>
+    <li><a class='nav-link' sa></a></li>
+      
+
+
+
+    <li class="nav-item" *ngIf="readValue('Role')=='nothing'">
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" style="margin:10px;" class="btn btn-info btn-lg dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Login <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/adminlogin']">Admin</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/login']">User Login</a></li>
+          
+          <li class="divider dropdown-divider"></li>
+        <!--   <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a> -->
+        
+          
+        </ul>
+        
+      </div>
+      </li> 
+      
+    
+    
+
+    
+    <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+
+
+
+
+    <li class="nav-item" *ngIf="readValue('Role')!='nothing'">
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" style="margin:10px;" class="btn btn-info btn-lg dropdown-toggle"
+                aria-controls="dropdown-basic">
+          MyAccount <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/my-coupons']">Coupons</a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/get-cart']">Cart</a></li>
+          
+          <li class="divider dropdown-divider"></li>
+        <!--   <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a> -->
+        
+          
+        </ul>
+        
+      </div>
+      </li> 
+  
+
+
+    
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+  
+
+      <li class="nav-item" *ngIf="readValue('Role')!='nothing'" >
+           <div  *ngIf="readValue('uname')==='Vidya'"  > 
+        <div class="btn-group" dropdown>
+          <button id="button-basic" dropdownToggle type="button" style="margin:10px;" class="btn btn-info btn-lg dropdown-toggle"
+                  aria-controls="dropdown-basic">
+            UserDetails <span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/get-users']">GetUsers</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLinkActive='active' [routerLink]="['/deleteusers']">Delete</a></li>
+            
+            <li class="divider dropdown-divider"></li>
+          <!--   <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a> -->
+          
+            
+          </ul>
+          </div>
+          </div> 
+        </li> 
+    
+
+
+
+        <li><a class='nav-link'  ></a></li>
+        <li><a class='nav-link'  ></a></li>
+
+
+    <li *ngIf="readValue('Role')!='nothing'"><a class='nav-link' style="margin:10px;" class="btn btn-info btn-lg active" role="button" routerLinkActive='active' [routerLink]="['/new-coupons']">Coupons</a></li>
+  
+    <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+    <li *ngIf="readValue('Role')=='nothing'"><a class='nav-link' style="margin:10px;" class="btn btn-info btn-lg active" role="button" routerLinkActive='active' [routerLink]="['/sign-up']">SignUp</a></li>
+    <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+
+   
+   <!--  <li *ngIf="readValue('Role')!='nothing'"><a class='nav-link' style="margin:10px;" class="btn btn-info btn-lg active" role="button" routerLinkActive='active' [routerLink]="['/my-coupons']">Mycoupons</a></li> -->
+   
+
+    <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+
+    
+    <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+  
+
+    <li *ngIf="readValue('Role')!='nothing'"><a class='nav-link' (click)="logout()"  style="margin:5px;" class="btn btn-info btn-lg active" role="button" >Logout</a></li>
+    <li><a class='nav-link'  ></a></li>
+   
+    <li><a class='nav-link'  ></a></li>
+    <li><a class='nav-link'  ></a></li>
+   
+    <li><a class='nav-link'  ></a></li>
+   
+    <li class="nav-item" *ngIf="readValue('Role')!='nothing'">
+        <a class="nav-link"  style="margin:5px;" role="button"><h1><b class="text-info"> Welcome  </b><b class="text-white">{{readValue('uname')}}</b></h1></a>
+    
+
+
+        
+  
+  </ul>
+  
+  
+  </nav>
+         </div>
+         </div>
+  
+  <div class=container-fluid >
+    <router-outlet>
+      
+    </router-outlet>
+  </div>
+  
+    
+  
+  
+  
+  <!-- 
+   <style>
+  
+    .demo
+    {
+      background-color:pink;
+    }
+    .background
+    {
+      background-color:cornflowerblue
+    }
+    </style>
+    <div class=demo>
+    <div id = "header">
+      <a href= "#">+91-9014378464</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href= "#">+91-9014378464</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href= "#">+91-9014378464</a>
+      
+    </div>
+    
+    <nav class='navbar navbar-expand navbar-light bg-light' class='center-block' id = 'padding'>
+      
+      <ul class='nav nav-pills'>
+        <li><a class='nav-link'  ></a></li>
+        <li><a class='nav-link'  ></a></li>
+        <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link' class="btn btn-default active" role="button" routerLinkActive='active' [routerLink]="['/home']">Home</a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+  
+      <li><a class='nav-link' class="btn btn-default active" role="button" routerLinkActive='active' [routerLink]="['/login']">Login</a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link' class="btn btn-default active" role="button" routerLinkActive='active' [routerLink]="['/new-coupons']">New Coupons</a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link'  ></a></li>
+      <li><a class='nav-link' class="btn btn-default active" role="button" routerLinkActive='active' [routerLink]="['/sign-up']">SignUp</a></li>
+    
+      </ul>
+    </nav>
+    </div>
+     -->
+    
+    <!--  <html lang="en">
+        <head>
+          <title>patient</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+        
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">DoctApp</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a  routerLink='/admin'>Admin</a></li>
+              <li><a  routerLink='/doctor'>Doctor</a></li>
+              <li><a  routerLink='/patient'>Patient</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+          
+        </body>
+        </html>
+    
+   -->
+  
+  
+    <div class="background">
+      <footer class="page-footer font-small indigo">
+  
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+  
+        <!-- Grid row -->
+        <div class="row">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+  
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Connect With Us</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                  <a href="http://www.amazon.in/gp/redirect.html/ref=footer_fb?location=http://www.facebook.com/AmazonIN&amp;token=2075D5EAC7BB214089728E2183FD391706D41E94&amp;6" class="nav_a">Facebook</a>
+ 
+              </li>
+              <li>
+                  <a href="http://www.amazon.in/gp/redirect.html/ref=footer_twitter?location=http://twitter.com/AmazonIN&amp;token=A309DFBFCB1E37A808FF531934855DC817F130B6&amp;6" class="nav_a">Twitter</a>
+              </li>
+              <li>
+                  <a href="http://www.amazon.in/gp/redirect.html?location=https://www.instagram.com/amazondotin&amp;token=264882C912E9D005CB1D9B61F12E125D5DF9BFC7&amp;source=standards" class="nav_a">Instagram</a>
+              </li>
+              <li>
+               
+              </li>
+            </ul>
+  
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="clearfix w-100 d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+  
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4"></h5>
+  
+            <ul class="list-unstyled">
+              <li>
+              <h3>Contact Us</h3>
+              </li>
+              <li>
+              <h5>CouponsDeals</h5>
+              </li>
+              <li>
+                  <h5>8767898765</h5>
+              </li>
+              <li>
+                <h6>couponsdeals@gmail.com</h6>
+              </li>
+            </ul>
+  
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="clearfix w-100 d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+  
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Features</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                This website provides differnt
+              </li>
+              <li>
+                types of coupons like shopping, 
+              </li>
+              <li>
+                food,grocies etc.,to lower rates.
+              </li>
+              <li>
+                Invest less shop more.
+              </li>
+            </ul>
+  
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="clearfix w-100 d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+  
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
+  
+            <ul class="list-unstyled">
+  
+               
+              <li>
+                  This website is about the dealing 
+              </li>
+              <li>
+                  of coupons for the less rate.
+              </li>
+              <li>
+                  Helps more for customers. 
+              </li>
+              <li>
+               @@!!
+              </li>
+            </ul>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row -->
+  
+      </div>
+      <!-- Footer Links -->
+  
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">Coupon deals
+       
+      </div>
+      <!-- Copyright -->
+  
+    </footer>
+  </div>
+  
+    <!-- Footer -->
+    
+    

@@ -1,0 +1,100 @@
+<style>
+#background
+{
+  background-color:honeydew;
+}
+</style>
+<div class=container-fluid>
+  <br>
+  <br>
+  <div class="backgroundcolor" style="text-align:center" id=background>
+      <br>
+      <br>
+      <br>
+      <br>
+          <h3>
+              <p class="text-primary">  Welcome  <b>{{readValue('uname')}}</b></p>
+         </h3>
+    
+       
+               
+               <br>
+              <!--  <h4><p class="text-success">Your copoun code is:</p></h4> -->
+<!-- 
+               <div *ngFor="let code of result">
+                  <p class="text-info"> {{code}}</p>
+
+
+               </div> -->
+
+
+
+
+               <div class="row">
+                  <div  *ngFor="let code of result"  class="center" >
+                      <div  *ngIf="code.username==readValue('uname')"  >
+                      <img class="card-img-top" src="{{code.imageUrl}}"  height = "300"  width ="10" alt="Card image cap">
+                      <div class="card-body">           
+                      <label><h3>couponcode:</h3><h1>{{code.couponCode}}</h1></label>
+                  
+                 
+                      
+                      </div>
+                  </div>
+                </div>
+          </div> 
+               <div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  </div>
+
+<!-- 
+                  <div class="row">
+                      <div  *ngFor="let seller of seller"  class="center" >
+                          
+                          <img class="card-img-top" src="{{seller.imageUrl}}"  width ="500" height ="411" alt="Card image cap">
+                          <div class="card-body">           
+                          <label>Price:</label>{{seller.price}}
+                      
+                           <button type="submit" routerLinkActive='active' [routerLink]="['/confirm']" (click)="onorder(seller.imageUrl,seller.price)">Order</button>
+                          
+                          </div>
+                      </div>
+                 
+              </div> -->
+<!-- 
+              <div class="row">
+  
+                  <div *ngFor="let customer of customers">
+                      
+                      <div *ngIf="customer.category==='Shopping'">
+                         
+                        
+                      <img class="card-img-top" src="{{customer.imgurl}}" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title"><b>{{customer.name}}</b></h5>
+                        <p class="card-text">{{customer.description}}</p>
+                        <p class="card-text"><b>Price: ? </b>{{customer.price}}</p>
+                        <a (click)="addcart(customer.id)" *ngIf="readValue('role')=='customer'" routerLinkActive="active" class="btn btn-primary">Add to Cart</a>
+                        <button (click)="deleteCustomer()" *ngIf="readValue('role')=='admin'">Delete</button>
+                      </div>
+                    </div>
+                    
+                  
+                  </div>
+                  </div>
+  -->
+     
+
+            
+                
+
+                
